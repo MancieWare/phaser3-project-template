@@ -1,0 +1,10 @@
+/* style.css */
+/* This file serves as the "base" */
+:root {
+    --bg-primary: #28283d;
+    --tx-primary: #8383c9;
+}
+
+body {
+    background-color: var(--bg-primary);
+}

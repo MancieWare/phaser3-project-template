@@ -1,6 +1,13 @@
+/* jshint esversion: 6 */
+//
+// This file is the entry point for the application.
 import Phaser from "phaser";
 import logoImg from "./assets/logo.png";
+import './css/reset.css';
+import './css/style.css';
 
+
+// Phaser game configuration
 const config = {
   type: Phaser.AUTO,
   parent: "phaser-example",
@@ -12,6 +19,7 @@ const config = {
   }
 };
 
+// Creating a new game object
 const game = new Phaser.Game(config);
 
 function preload() {
