@@ -5,6 +5,14 @@
     --tx-primary: #8383c9;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
 body {
-    background-color: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
