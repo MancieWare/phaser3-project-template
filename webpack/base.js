@@ -5,9 +5,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  context: path.resolve(__dirname, '../'),
   entry: './src/index.js',
   mode: "development",
   devtool: "eval-source-map",
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     // Module loaders can be chained - each one therein applying
     // transformations to the processed resource.  A chain is
@@ -43,14 +47,15 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-      root: path.resolve(__dirname, "../")
+      root: path.resolve(__dirname, "../docs")
     }),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      title: "Mancie's Playground",
+      template: "./src/index.html"
     })
   ]
 };

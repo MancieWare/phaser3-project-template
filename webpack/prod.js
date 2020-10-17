@@ -12,7 +12,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = merge(base, {
   mode: "production",
   output: {
-    filename: "bundle.min.js",
+    filename: "index.js",
     path: path.resolve(__dirname, 'dist')
   },
   devtool: false,
