@@ -1,0 +1,67 @@
+{
+    "anims": [
+        {
+            "key": "upidle",
+            "type": "frame",
+            "frameRate": 24,
+            "duration": 1.5,
+            "skipMissedFrames": true,
+            "delay": 0,
+            "repeat": -1,
+            "repeatDelay": 0,
+            "yoyo": false,
+            "showOnStart": false,
+            "hideOnComplete": false,
+            "frames": [
+                {
+                    "key": "player",
+                    "frame": "idle-up-0.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-1.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-2.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-3.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-4.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-5.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-6.aseprite",
+                    "duration": 0,
+                    "visible": false
+                },
+                {
+                    "key": "player",
+                    "frame": "idle-up-7.aseprite",
+                    "duration": 0,
+                    "visible": false
+                }
+            ]
+        }
+    ]
+}

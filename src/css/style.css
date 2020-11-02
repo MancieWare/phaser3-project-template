@@ -1,8 +1,8 @@
 /* style.css */
 /* This file serves as the "base" */
 :root {
-    --bg-primary: #28283d;
-    --tx-primary: #8383c9;
+    --bg-dark: #28283d;
+    --bg-light: #8383c9;
 }
 
 html {
@@ -15,4 +15,17 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+}
+
+.game-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.game-container>canvas {
+    border-radius: 5px;
+    /* flex-basis: auto; */
+    /* height: 100vh; */
 }

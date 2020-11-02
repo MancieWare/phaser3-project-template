@@ -2,17 +2,24 @@
 //
 // This file is the entry point for the application.
 import Phaser from "phaser";
-import logoImg from "./assets/logo.png";
+import player from "./assets/8_dir_template_animated.png";
+import background from "./assets/desert_template_day_32x32.png";
 import './css/reset.css';
 import './css/style.css';
 
+const playerSheet = require('./assets/8_dir_template_animated.json');
+const playerData = require('./assets/8_dir_template_animations.json');
+const map = require('./assets/desert_example.json');
 
 // Phaser game configuration
 const config = {
   type: Phaser.AUTO,
-  parent: "phaser-example",
-  width: 800,
-  height: 600,
+  parent: "game-container",
+  width: window.innerWidth * window.devicePixelRatio,
+  height: window.innerHeight * window.devicePixelRatio,
+  // width: 800,
+  // height: 600,
+  pixelArt: true,
   scene: {
     preload: preload,
     create: create
@@ -23,18 +30,25 @@ const config = {
 const game = new Phaser.Game(config);
 
 function preload() {
-  this.load.image("logo", logoImg);
+  // Loading animations for player
+  this.load.animation('playerData', playerData);
+  // Loading player sprite atlas
+  this.load.atlas("player", player, playerSheet);
+  // Load tilemap image
+  this.load.image('background', background);
+  // Load tilemap
+  this.load.tilemapTiledJSON('map', map);
 }
 
 function create() {
-  const logo = this.add.image(400, 150, "logo");
+  // Create the tilemap
+  this.map = this.make.tilemap({ key: 'map'});
+  // add the tileset image to map
+  // Name of layer exported from tile, key of tileset image, frame width, frame height, margin, spacing
+  this.tiles = this.map.addTilesetImage('background', 'background', 32, 32, 1, 2);
+  // create background layer
+  // name of layer in tiled file, tiles loaded, x, y starting position
+  this.backgroundLayer = this.map.createStaticLayer('background', this.tiles, 0, 0);
 
-  this.tweens.add({
-    targets: logo,
-    y: 450,
-    duration: 2000,
-    ease: "Power2",
-    yoyo: true,
-    loop: -1
-  });
+  let player = this.add.sprite(window.innerWidth * window.devicePixelRatio/2, window.innerHeight * window.devicePixelRatio/2, "player").play("upidle");
 }
