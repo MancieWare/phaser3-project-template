@@ -25,4 +25,3 @@ This project uses [npm](https://www.npmjs.com/) for package management:
 - [Phaser Discourse](https://phaser.discourse.group/)
 - [Getting Started with Webpack](https://webpack.js.org/guides/getting-started/)
 - [Real Favicon Generator](https://realfavicongenerator.net/)
-- [Bundle your favicons with Webpack](https://medium.com/tech-angels-publications/bundle-your-favicons-with-webpack-b69d834b2f53)
