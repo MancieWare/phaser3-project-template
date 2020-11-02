@@ -10,7 +10,7 @@ module.exports = {
   mode: "development",
   devtool: "eval-source-map",
   devServer: {
-    contentBase: './dist'
+    contentBase: './docs'
   },
   module: {
     // Module loaders can be chained - each one therein applying
@@ -55,6 +55,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: "Mancie's Playground",
+      favicon: "./src/favicon/favicon.ico",
       template: "./src/index.html"
     })
   ]
